@@ -40,4 +40,45 @@ int main()
     }while(op!=5);
     system("pause");
 }
+	
+	void suma(void)
+	{ 
+	  system ("cls");
+     int num=0, suma=0, i=0, mayor=0, menor=0;
+     char esc;
+    
+    printf("***************** Numeros de n cantidad ******************\n\n");
+    
+     do
+     {
+           printf("Ingrese un numero entero: ");
+           scanf("%d",&num);
+           suma += num;
+          
+            if(num > mayor)
+            {
+                mayor=num; //mayor obtiene el valor actual de num
+                menor=num; 
+            }
+             else if(num<=menor)
+             {
+                 menor = num; //menor obtiene el valor actual y menor de num
+             }
+          
+            printf("\n\nIngrese \"ESC\" para salir o Preione \"Enter\" Para Continuar.\n");
+            esc=getch();
+            printf("*****************************************\n ");
+         
+          i++;
+      }while( esc != 27 );
+     
+     
+       printf("La Suma de los numeros: %d\n", suma);
+       printf("La Media de los numeros: %.2f\n", (float)suma/i);
+       printf("El Valor mayor: %d\n", mayor);
+       printf("El Valor menor: %d\n\n", menor);
+   
+	system("pause");
+	}
+	
 
