@@ -169,5 +169,54 @@ void leernumero(void)
   system("pause");
 }
 
+void fibonacci(void)
+{
+	system ("cls");
+    int cantidad, f, numan=0, numac=1, i;
+     printf("************ Fibonacci \"for\" ********************\n\n");
+     printf("Limite de la serie: ");
+	 scanf("%d",&cantidad);
+	 	printf("\n");
+	 printf("\n%d \n%d", numan, numac);
+	 for(i=1;  i<cantidad;  i++)
+	 {
+	 	f=numan+numac; 
 
+	 	printf("\n%d ", f);
+	    numan=numac; //Numero anterior toma valor del numero actual
+	 	numac=f; //Numero actual toma el valor de la suma de numan y numacprintf("\n%d \n%d", numan, numac);
+	}
+	 
+	printf("\n");
+	printf("************ Fibonacci \"While\" ********************\n\n");
+	numan=0;
+	numac=1;
+	i=1;
+	printf("\n%d \n%d", numan, numac);
+	while(i < cantidad)
+	{
+		f=numan+numac; 
+	 	printf("\n%d ", f);
+	    numan=numac; //Numero anterior toma valor del numero actual
+	 	 numac=f; //Numero actual toma el valor de la suma de numan y numac
+	 	 i++;
+	}
+	printf("\n");
+	printf("************ Fibonacci \" Do While\" ********************\n\n");
+	numan=0;
+	numac=1;
+	i=1;
+	printf("\n%d \n%d", numan, numac);
+	do
+	{
+		f=numan+numac; 
+
+	 	printf("\n%d ", f);
+	    numan=numac; //Numero anterior toma valor del numero actual
+	 	numac=f; //Numero actual toma el valor de la suma de numan y numac
+	 	i++;
+	}while(i<cantidad);
+	printf("\n\n");
+	system("pause");
+}
 
