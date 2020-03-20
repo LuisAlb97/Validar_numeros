@@ -126,4 +126,48 @@ int main()
         system("pause");
 }
 
+void leernumero(void)
+{
+       	system ("cls");   
+     	int inf=0, sup, num=0, b=0;
+    	char esc,c;
+    	printf("***************** Validar numeros **************\n\n");
+		printf("Ingrese el rango inferior:  ");
+	 	scanf("%d",&inf);
+		printf("\nIngrese el rango superior:  ");
+	 	scanf("%d",&sup);
+
+  if((inf!=c) || (sup!=c))
+  {
+	 do
+	 {
+	 	printf("\n\n--------------------------");
+	     printf("\nIngrese cualquier numero (entero): ");
+	      fflush(stdin);
+	 	  scanf("%d", &num);
+	 	 
+	 	  
+	 	  if(num<=sup && num >= inf)
+	 	  {
+	 	  	b=0; //no cambia b si el numero esta dentro del rango
+		   } 
+		    else
+		    {		 
+	         printf("\n\n\"Valor fuera del rango.\"");
+			}
+			
+		printf("\n\nTecla \"ESC\" para salir o \"Enter\" para continuar.");
+		esc = getch();
+	 	  
+	 }while(b!=1 && esc != 27);
+        }
+         else
+         {
+         	printf("A ocurrido un ERROR, intentelo de nuevo.");
+		 }
+
+  system("pause");
+}
+
+
 
