@@ -81,4 +81,49 @@ int main()
 	system("pause");
 	}
 	
+	void impares(void)
+{
+	
+    	system ("cls");
+        int i, j=0, k=0, num, par=0, impar=0, sump=0, sumi=0, b=0;
+  
+          srand(time(NULL));
+		  printf ("***************** Numeros Aleatorios ****************\n\n");
+  	      for(i=0; b==0 ; i++) //si b es 1 se sale
+           {
+      	       num = 10+rand()%(60-10+1);
+      	         if(num %2 == 0)
+      	          {
+                  	printf("\npar:%d ", num);
+      		         par = num;
+      		         sump+=par;//para sacar la media
+      		          j++;//para sacar la media
+		          }
+                      else
+                       {  
+        	             printf("\nimpar:%d ", num); //imprime solo los impares
+        	             impar = num;
+      		             sumi+=impar; // sacar la media
+      		             k++; //sacar la media
+	                    }
+	                if(k>=15 || i>=24)
+	                 { 
+	                 b=1; //cualquiera de los 2 casos, si uno de los 2 se cumple cambia el valor
+					 }
+					  else
+					  {
+					  	b=0;
+					  }
+              }
+
+
+     
+         printf("\n\nNumeros=%d", i);
+         printf("\nNumeros Pares=%d", j);
+         printf("\nNumeros Impares=%d", k);
+         printf("\n\nLa media de los pares es: %.4f", (float)sump/j);
+         printf("\nLa media de los impares es: %.4f\n\n", (float)sumi/k);
+        system("pause");
+}
+
 
